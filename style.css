@@ -1,0 +1,48 @@
+body {
+  font-family: 'Fredoka', cursive, sans-serif;
+}
+
+/* Floating background animations */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  50% { transform: translateY(-18px) rotate(8deg) scale(1.08); }
+}
+
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  50% { transform: translateY(-25px) rotate(-10deg) scale(1.1); }
+}
+
+@keyframes pulse-bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
+.animate-float1 { animation: float-slow 4s ease-in-out infinite; }
+.animate-float2 { animation: float-fast 5s ease-in-out 1s infinite; }
+.animate-float3 { animation: float-slow 6s ease-in-out 2s infinite; }
+.animate-pulse-bounce { animation: pulse-bounce 2s ease-in-out infinite; }
+.animate-wiggle { animation: wiggle 1.5s ease-in-out infinite; }
+.animate-shake { animation: shake 0.4s ease-in-out; }
+
+/* Custom text stroke effects */
+.text-stroke {
+  -webkit-text-stroke: 4px #2e1065;
+  paint-order: stroke fill;
+}
+
+.text-stroke-sm {
+  -webkit-text-stroke: 2px #2e1065;
+  paint-order: stroke fill;
+}
