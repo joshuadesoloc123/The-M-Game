@@ -85,7 +85,7 @@
       <section id="screen-mode-select" class="w-full h-full flex flex-col items-center justify-center p-4">
         <div class="w-full max-w-2xl flex flex-col items-center text-center">
 
-          <div class="mb-8">
+          <div class="mb-6">
             <h2 class="text-4xl sm:text-6xl font-black tracking-wide text-yellow-300 text-stroke drop-shadow-[0_8px_0_#2e1065]">
               CHOOSE A GAME!
             </h2>
@@ -94,7 +94,7 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 w-full max-w-2xl px-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full max-w-2xl px-4">
             
             <!-- ADDITION -->
             <button class="mode-card group p-4 sm:p-5 bg-emerald-400 hover:bg-emerald-300 border-4 border-purple-900 rounded-3xl shadow-[0_8px_0_0_#2e1065] hover:shadow-[0_4px_0_0_#2e1065] hover:translate-y-1 active:translate-y-2 active:shadow-none transition-all flex items-center justify-between cursor-pointer min-w-0" data-mode="addition">
@@ -144,11 +144,23 @@
               <i data-lucide="play-circle" class="w-7 h-7 sm:w-8 sm:h-8 text-purple-950 stroke-[3] group-hover:scale-110 transition-transform shrink-0 ml-2"></i>
             </button>
 
+            <!-- MIXED METHODS (FULL SPAN) -->
+            <button class="mode-card group p-4 sm:p-5 bg-purple-400 hover:bg-purple-300 border-4 border-purple-900 rounded-3xl shadow-[0_8px_0_0_#2e1065] hover:shadow-[0_4px_0_0_#2e1065] hover:translate-y-1 active:translate-y-2 active:shadow-none transition-all flex items-center justify-between cursor-pointer min-w-0 sm:col-span-2" data-mode="mixed">
+              <div class="flex items-center gap-3 sm:gap-4 min-w-0">
+                <span class="text-3xl sm:text-4xl font-black text-purple-950 bg-yellow-300 border-3 border-purple-900 w-11 h-11 sm:w-13 sm:h-13 shrink-0 rounded-2xl flex items-center justify-center shadow-inner">🔀</span>
+                <div class="text-left min-w-0">
+                  <span class="block text-xl sm:text-2xl font-black text-purple-950 tracking-tight truncate">MIXED METHODS</span>
+                  <span class="text-xs sm:text-sm font-bold text-purple-900/80 truncate block">Random Operations Challenge!</span>
+                </div>
+              </div>
+              <i data-lucide="sparkles" class="w-7 h-7 sm:w-8 sm:h-8 text-purple-950 stroke-[3] group-hover:scale-110 transition-transform shrink-0 ml-2"></i>
+            </button>
+
           </div>
 
           <button 
             id="btn-back-menu" 
-            class="mt-8 px-6 py-3 bg-white/80 hover:bg-white text-purple-950 font-black text-lg border-3 border-purple-900 rounded-2xl shadow-[0_5px_0_0_#2e1065] active:translate-y-1 active:shadow-none transition flex items-center gap-2 cursor-pointer"
+            class="mt-6 px-6 py-3 bg-white/80 hover:bg-white text-purple-950 font-black text-lg border-3 border-purple-900 rounded-2xl shadow-[0_5px_0_0_#2e1065] active:translate-y-1 active:shadow-none transition flex items-center gap-2 cursor-pointer"
           >
             <i data-lucide="arrow-left" class="w-6 h-6 stroke-[3]"></i>
             BACK TO MENU
@@ -421,23 +433,108 @@
         </div>
       </section>
 
+      <!-- ================= SECTION 3E: MIXED DIGIT SELECTION ================= -->
+      <section id="screen-mixed-select" class="w-full h-full flex flex-col items-center justify-center p-4">
+        <div class="w-full max-w-2xl flex flex-col items-center text-center">
+
+          <div class="mb-8">
+            <h2 class="text-4xl sm:text-6xl font-black tracking-wide text-yellow-300 text-stroke drop-shadow-[0_8px_0_#2e1065]">
+              MIXED METHODS 🔀
+            </h2>
+            <p class="text-base sm:text-xl font-bold text-purple-950 mt-2 bg-white/50 backdrop-blur-md px-6 py-1.5 rounded-full border-2 border-purple-900/30 inline-block">
+              Choose your difficulty level! 🎯
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 w-full max-w-2xl px-4">
+            <button class="digit-card group p-5 bg-emerald-400 hover:bg-emerald-300 border-4 border-purple-900 rounded-3xl shadow-[0_8px_0_0_#2e1065] hover:shadow-[0_4px_0_0_#2e1065] hover:translate-y-1 active:translate-y-2 active:shadow-none transition-all flex items-center justify-between cursor-pointer" data-operation="mixed" data-digit="ones">
+              <div class="flex items-center gap-4">
+                <span class="text-2xl font-black text-purple-950 bg-white border-3 border-purple-900 w-12 h-12 rounded-2xl flex items-center justify-center shadow-inner">1</span>
+                <div class="text-left">
+                  <span class="block text-2xl font-black text-purple-950 tracking-tight">ONES</span>
+                  <span class="text-xs sm:text-sm font-bold text-purple-900/80">Single Digits (1-9)</span>
+                </div>
+              </div>
+              <i data-lucide="zap" class="w-8 h-8 text-purple-950 stroke-[2.5] group-hover:scale-110 transition-transform"></i>
+            </button>
+
+            <button class="digit-card group p-5 bg-sky-400 hover:bg-sky-300 border-4 border-purple-900 rounded-3xl shadow-[0_8px_0_0_#2e1065] hover:shadow-[0_4px_0_0_#2e1065] hover:translate-y-1 active:translate-y-2 active:shadow-none transition-all flex items-center justify-between cursor-pointer" data-operation="mixed" data-digit="tens">
+              <div class="flex items-center gap-4">
+                <span class="text-2xl font-black text-purple-950 bg-white border-3 border-purple-900 w-12 h-12 rounded-2xl flex items-center justify-center shadow-inner">10</span>
+                <div class="text-left">
+                  <span class="block text-2xl font-black text-purple-950 tracking-tight">TENS</span>
+                  <span class="text-xs sm:text-sm font-bold text-purple-900/80">Double Digits (10-99)</span>
+                </div>
+              </div>
+              <i data-lucide="flame" class="w-8 h-8 text-purple-950 stroke-[2.5] group-hover:scale-110 transition-transform"></i>
+            </button>
+
+            <button class="digit-card group p-5 bg-amber-400 hover:bg-amber-300 border-4 border-purple-900 rounded-3xl shadow-[0_8px_0_0_#2e1065] hover:shadow-[0_4px_0_0_#2e1065] hover:translate-y-1 active:translate-y-2 active:shadow-none transition-all flex items-center justify-between cursor-pointer" data-operation="mixed" data-digit="hundreds">
+              <div class="flex items-center gap-4">
+                <span class="text-2xl font-black text-purple-950 bg-white border-3 border-purple-900 w-12 h-12 rounded-2xl flex items-center justify-center shadow-inner">100</span>
+                <div class="text-left">
+                  <span class="block text-2xl font-black text-purple-950 tracking-tight">HUNDREDS</span>
+                  <span class="text-xs sm:text-sm font-bold text-purple-900/80">3 Digits (100-999)</span>
+                </div>
+              </div>
+              <i data-lucide="trophy" class="w-8 h-8 text-purple-950 stroke-[2.5] group-hover:scale-110 transition-transform"></i>
+            </button>
+
+            <button class="digit-card group p-5 bg-purple-400 hover:bg-purple-300 border-4 border-purple-900 rounded-3xl shadow-[0_8px_0_0_#2e1065] hover:shadow-[0_4px_0_0_#2e1065] hover:translate-y-1 active:translate-y-2 active:shadow-none transition-all flex items-center justify-between cursor-pointer" data-operation="mixed" data-digit="thousands">
+              <div class="flex items-center gap-4">
+                <span class="text-xl font-black text-purple-950 bg-white border-3 border-purple-900 w-12 h-12 rounded-2xl flex items-center justify-center shadow-inner">1k</span>
+                <div class="text-left">
+                  <span class="block text-2xl font-black text-purple-950 tracking-tight">THOUSANDS</span>
+                  <span class="text-xs sm:text-sm font-bold text-purple-900/80">4 Digits (1000-9999)</span>
+                </div>
+              </div>
+              <i data-lucide="crown" class="w-8 h-8 text-purple-950 stroke-[2.5] group-hover:scale-110 transition-transform"></i>
+            </button>
+          </div>
+
+          <button class="btn-back-categories mt-8 px-6 py-3 bg-white/80 hover:bg-white text-purple-950 font-black text-lg border-3 border-purple-900 rounded-2xl shadow-[0_5px_0_0_#2e1065] active:translate-y-1 active:shadow-none transition flex items-center gap-2 cursor-pointer">
+            <i data-lucide="arrow-left" class="w-6 h-6 stroke-[3]"></i>
+            BACK TO CATEGORIES
+          </button>
+        </div>
+      </section>
+
       <!-- ================= SECTION 4: GAMEPLAY SCREEN ================= -->
-      <section id="screen-gameplay" class="w-full h-full flex flex-col items-center justify-between p-4 py-8">
+      <section id="screen-gameplay" class="w-full h-full flex flex-col items-center justify-between p-4 py-8 relative">
         
-        <!-- Header / Progress Bar -->
+        <!-- Header / Progress & Controls Bar -->
         <div class="w-full max-w-xl flex flex-col items-center gap-3">
-          <div class="w-full flex items-center justify-between text-purple-950 font-black px-2">
-            <span id="game-mode-badge" class="bg-yellow-300 border-3 border-purple-900 px-4 py-1 rounded-2xl shadow-[0_4px_0_0_#2e1065] text-sm sm:text-base">
+          <div class="w-full flex items-center justify-between text-purple-950 font-black px-2 gap-2">
+            <!-- Pause Button -->
+            <button 
+              id="btn-pause" 
+              class="bg-pink-400 hover:bg-pink-300 active:scale-90 border-3 border-purple-900 p-2 rounded-2xl shadow-[0_4px_0_0_#2e1065] text-purple-950 transition cursor-pointer flex items-center justify-center"
+              aria-label="Pause Game"
+            >
+              <i data-lucide="pause" class="w-6 h-6 stroke-[3]"></i>
+            </button>
+
+            <span id="game-mode-badge" class="bg-yellow-300 border-3 border-purple-900 px-4 py-1 rounded-2xl shadow-[0_4px_0_0_#2e1065] text-sm sm:text-base truncate">
               ADDITION - ONES ➕
             </span>
-            <span id="question-tracker" class="bg-white border-3 border-purple-900 px-4 py-1 rounded-2xl shadow-[0_4px_0_0_#2e1065] text-sm sm:text-base">
+
+            <span id="question-tracker" class="bg-white border-3 border-purple-900 px-4 py-1 rounded-2xl shadow-[0_4px_0_0_#2e1065] text-sm sm:text-base shrink-0">
               1 / 20
             </span>
           </div>
 
-          <!-- Progress Bar Container -->
+          <!-- Overall Progress Bar Container -->
           <div class="w-full bg-white/70 border-4 border-purple-900 h-6 rounded-full overflow-hidden p-0.5 shadow-[0_4px_0_0_#2e1065]">
             <div id="progress-bar-fill" class="bg-emerald-400 h-full rounded-full transition-all duration-300 w-0"></div>
+          </div>
+
+          <!-- Per-Question Timer Bar -->
+          <div class="w-full flex items-center gap-2 px-1">
+            <i data-lucide="timer" class="w-5 h-5 text-purple-950 stroke-[2.5]"></i>
+            <div class="flex-1 bg-purple-950/20 border-2 border-purple-900 h-4 rounded-full overflow-hidden p-0.5">
+              <div id="timer-bar-fill" class="bg-amber-400 h-full rounded-full transition-all duration-100 ease-linear w-full"></div>
+            </div>
+            <span id="timer-text" class="text-sm font-black text-purple-950 w-7 text-right">12s</span>
           </div>
         </div>
 
@@ -547,6 +644,38 @@
             </div>
           </div>
           <i data-lucide="arrow-right" class="w-6 h-6 text-purple-950 stroke-[3] group-hover:translate-x-1 transition-transform"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PAUSE MODAL -->
+  <div id="pause-modal" class="fixed inset-0 z-50 bg-purple-950/70 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="pause-card" class="w-full max-w-sm bg-yellow-300 border-4 border-purple-900 rounded-3xl p-6 sm:p-8 shadow-[0_12px_0_0_#2e1065] text-center translate-y-6 transition-transform duration-300">
+      
+      <div class="w-16 h-16 bg-pink-400 border-4 border-purple-900 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-[0_4px_0_0_#2e1065]">
+        <i data-lucide="pause" class="w-10 h-10 text-purple-950 stroke-[3]"></i>
+      </div>
+
+      <h2 class="text-4xl font-black text-purple-950 tracking-wide mb-6">
+        GAME PAUSED
+      </h2>
+
+      <div class="space-y-3">
+        <button id="btn-resume" class="w-full py-3.5 bg-emerald-400 hover:bg-emerald-300 text-purple-950 border-3 border-purple-900 font-black text-xl rounded-2xl shadow-[0_5px_0_0_#2e1065] active:translate-y-1 active:shadow-none transition cursor-pointer flex items-center justify-center gap-2">
+          <i data-lucide="play" class="w-6 h-6 stroke-[3]"></i>
+          RESUME
+        </button>
+
+        <button id="btn-restart" class="w-full py-3.5 bg-amber-400 hover:bg-amber-300 text-purple-950 border-3 border-purple-900 font-black text-xl rounded-2xl shadow-[0_5px_0_0_#2e1065] active:translate-y-1 active:shadow-none transition cursor-pointer flex items-center justify-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-6 h-6 stroke-[3]"></i>
+          RESTART
+        </button>
+
+        <button id="btn-quit" class="w-full py-3.5 bg-pink-400 hover:bg-pink-300 text-purple-950 border-3 border-purple-900 font-black text-xl rounded-2xl shadow-[0_5px_0_0_#2e1065] active:translate-y-1 active:shadow-none transition cursor-pointer flex items-center justify-center gap-2">
+          <i data-lucide="home" class="w-6 h-6 stroke-[3]"></i>
+          QUIT TO MENU
         </button>
       </div>
 
